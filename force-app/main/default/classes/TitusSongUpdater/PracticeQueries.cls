@@ -71,6 +71,7 @@ public with sharing class PracticeQueries {
             for (Opportunity o : a) {
                     if (o.Amount > avOpp){
                         accsMeetCriteria.add(a);
+                        System.debug('HELLO GIT TEST');
                     }
             }
         }
