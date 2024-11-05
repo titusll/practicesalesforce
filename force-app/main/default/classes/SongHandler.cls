@@ -57,4 +57,12 @@ global with sharing class SongHandler {
 
             return sendThis;
         }
+
+        // List the top 3 opportunities (by amount) for each account
+        public static List<Account> getTopThree(){
+
+            List<Account> acct = [SELECT Id, (SELECT Amount FROM Opportunity ORDER BY Amount DESC LIMIT 3) FROM Account];
+
+            return acct;
+        }
     }
