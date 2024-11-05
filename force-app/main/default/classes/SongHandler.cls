@@ -15,6 +15,8 @@ global with sharing class SongHandler {
             update currentSong;
     
             return 'Album Title: ' + currentSong.Album__c;
+
+            System.debug('HELLO');
         }
     
         @AuraEnabled(cacheable=true)
